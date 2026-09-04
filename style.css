@@ -1,0 +1,807 @@
+/* ==========================================================================
+    CSS Variables
+    ========================================================================== */
+:root {
+    --bg-color: #fdfbf7;
+    --bg-light: #f4f1e9;
+    --text-primary: #1a1a1a;
+    --text-secondary: #555555;
+    --accent-color: #8b0000;
+    --card-bg: #ffffff;
+    --border-color: #e5e1d8;
+    --font-main: "Inter", "Noto Sans Thai", sans-serif;
+    --container-width: 1350px;
+}
+
+/* ==========================================================================
+    Reset & Base
+    ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+ul {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+section {
+    padding: 5rem 0;
+}
+.bg-light {
+    background-color: var(--bg-light);
+}
+.mt-4 {
+    margin-top: 3rem;
+}
+.text-center {
+    text-align: center;
+}
+
+/* ==========================================================================
+    Titles
+    ========================================================================== */
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    position: relative;
+}
+.section-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-color);
+    margin: 0.75rem auto 0;
+}
+.subsection-title {
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+    Navigation
+    ========================================================================== */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(253, 251, 247, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+.logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+.nav-links a {
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--bg-color);
+        text-align: center;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* ==========================================================================
+    Hero Section
+    ========================================================================== */
+#hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 70px;
+}
+.hero-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.hero-content {
+    flex: 1;
+    text-align: left;
+    max-width: 650px;
+}
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+.btn-primary {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 2px;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+.btn-primary:hover {
+    background-color: #630000;
+    transform: translateY(-2px);
+}
+
+.hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+}
+.hero-img-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.hero-img-placeholder {
+    background-color: var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    background-size: cover;
+    background-position: center;
+}
+.hero-img-1 { width: 280px; height: 420px; }
+.hero-img-2 { width: 220px; height: 220px; }
+.hero-img-3 { width: 220px; height: 175px; }
+
+@media (max-width: 992px) {
+    .hero-layout { flex-direction: column; text-align: center; margin-top: 4rem; margin-bottom: 2rem; }
+    .hero-content { margin: 0 auto; text-align: center; }
+    .hero-visual { justify-content: center; margin-top: 3rem; }
+}
+
+/* ==========================================================================
+    About & Contact
+    ========================================================================== */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+@media (min-width: 1100px) {
+    .profile-grid.three-cols {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.intro-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 2rem 1.2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.intro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+.intro-card .subsection-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.15rem;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+.intro-card .subsection-title i {
+    color: var(--accent-color);
+}
+
+.data-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.data-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+.data-label {
+    font-weight: 600;
+    color: var(--accent-color);
+    min-width: 85px;
+    flex-shrink: 0;
+}
+.data-value {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    white-space: nowrap;
+}
+.text-muted {
+    color: #888888;
+}
+@media (max-width: 768px) {
+    .data-value { white-space: normal; }
+}
+
+.contact-banner {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-left: 6px solid var(--accent-color);
+    border-radius: 4px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.contact-banner-title {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin: 0;
+}
+.contact-banner-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+a.contact-item:hover {
+    color: var(--accent-color);
+}
+.contact-item i {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+}
+a.contact-item:hover i {
+    color: var(--accent-color);
+}
+
+/* ==========================================================================
+    Skills Section
+    ========================================================================== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.skill-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2.5rem 2rem;
+    border-radius: 4px;
+}
+.skill-card h3 {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+.skill-list li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+}
+.skill-list li::before {
+    content: "•";
+    color: var(--accent-color);
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.highlight-card {
+    border-top: 4px solid var(--accent-color);
+}
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+.skill-tags .tag {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+    Projects & Activities Cards
+    ========================================================================== */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+    .card-grid.three-cols {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+.card-img-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+.cert-thumb {
+    height: 150px;
+}
+.card-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+.cert-title {
+    font-size: 1rem;
+}
+.card-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    flex-grow: 1;
+}
+
+.click-to-view {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+    transition: transform 0.2s ease;
+}
+.card:hover .click-to-view {
+    transform: translateX(5px);
+}
+
+/* ==========================================================================
+    Modal System & Modal Image Layouts
+    ========================================================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    backdrop-filter: blur(4px);
+}
+.modal-overlay.active {
+    display: flex;
+}
+.modal-content {
+    background: var(--bg-color);
+    width: 100%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 4px;
+    position: relative;
+    padding: 2.5rem;
+    border: 1px solid var(--border-color);
+}
+.text-center-modal {
+    max-width: 1000px;
+    text-align: center;
+}
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: color 0.3s;
+    line-height: 1;
+}
+.modal-close:hover {
+    color: var(--accent-color);
+}
+.modal-body h2 {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+.modal-body h4 {
+    margin: 1.5rem 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+.modal-body p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+.btn-video {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--text-primary);
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 2px;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+.btn-video:hover {
+    background: var(--accent-color);
+    color: #fff;
+}
+
+/* 1. Layout: เรียงภาพเดี่ยวเต็มความกว้าง เรียงต่อลงมาด้านล่าง (Stack) */
+.modal-img-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+.modal-img-full {
+    width: 100%;
+    height: 380px; 
+    background: var(--border-color);
+    border-radius: 6px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 2. Layout: รูปมือถือ 3 รูป เรียงเคียงข้างกันใน 1 แถว */
+.modal-mobile-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.modal-mobile-img {
+    height: 380px;
+    background: var(--border-color);
+    border-radius: 6px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+@media (max-width: 768px) {
+    .modal-mobile-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 3. Layout: บนภาพใหญ่เต็มความกว้าง 1 รูป, ล่าง 2 ภาพคู่กัน */
+.modal-img-gallery-custom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.modal-img-main {
+    grid-column: span 2;
+    height: 320px;
+    background: var(--border-color);
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.modal-img-sub {
+    height: 220px;
+    background: var(--border-color);
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 4. Layout: แบบผสม (บนเต็มจอ, กลางซ้าย, ล่างขวาแนวตั้ง) */
+.modal-img-mixed {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+.modal-img-top {
+    grid-column: span 2;
+    width: 100%;
+    height: 320px;
+    background: var(--border-color);
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.modal-img-mid {
+    width: 100%;
+    height: 250px;
+    background: var(--border-color);
+    border-radius: 4px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+.modal-img-bottom {
+    width: 100%;
+    height: 250px;
+    background: var(--border-color);
+    border-radius: 4px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+/* 5. Layout ใหม่ล่าสุด: เรียงแนวนอน 3 รูปติดกัน (สำหรับโปรเจกต์ 5 MINOWEAR) */
+.modal-img-gallery-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.modal-img-gallery-3col .modal-img {
+    width: 100%;
+    height: 200px;
+    background: var(--border-color);
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+@media (max-width: 576px) {
+    .modal-img-gallery-3col {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================================
+    Certificates Modal
+    ========================================================================== */
+.cert-grid-2col {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .cert-grid-2col {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.cert-item {
+    height: 300px;
+    margin-bottom: 0 !important;
+    width: 100%;
+    background: var(--border-color);
+    border-radius: 4px;
+    background-size: contain; /* ปรับให้เกียรติบัตรแสดงเต็มใบไม่โดนตัด */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+
+/* ==========================================================================
+    Footer
+    ========================================================================== */
+footer {
+    background: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    padding: 2rem;
+    text-align: center;
+}
+.copyright {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+/* ==========================================================================
+    Project Details Text Layout (ดีไซน์ข้อความใน Modal)
+    ========================================================================== */
+.project-details {
+    text-align: left;
+    margin-top: 1rem;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+.project-details h4 {
+    color: var(--accent-color);
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid var(--bg-light);
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+.project-details h4:first-child {
+    margin-top: 0;
+}
+.project-details p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+.project-details ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+.project-details ul li {
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 0.6rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+.project-details ul li::before {
+    content: "\f058"; /* ไอคอนวงกลมติ๊กถูก (FontAwesome) */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+}
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.tech-tags span {
+    background-color: var(--bg-light);
+    color: var(--accent-color);
+    border: 1px solid var(--border-color);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+.modal-body > h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.project-details .btn-video {
+    margin-top: 0;
+}

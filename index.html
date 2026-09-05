@@ -7,7 +7,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -15,21 +15,25 @@
 </head>
 <body>
 
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-mark"></div>
+    </div>
+
     <header>
         <div class="container">
             <nav>
-                <div class="logo">BENJAWAN.T</div>
-                <div class="hamburger" id="hamburger">
+                <div class="logo"><span class="sun-mark"></span> BENJAWAN.T</div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                     <span></span><span></span><span></span>
-                </div>
+                </button>
                 <ul class="nav-links" id="nav-links">
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#activities">Activities</a></li>
-                    
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,34 +41,35 @@
 
     <main>
         <section id="hero">
+            <div class="hero-sun" aria-hidden="true"></div>
             <div class="container hero-layout">
                 <div class="hero-content">
-                    <div style="font-size: 0.95rem; font-weight: 700; letter-spacing: 3px; color: var(--text-secondary); margin-bottom: 1.5rem;">
-                        E-PORTFOLIO
+                    <div class="hero-eyebrow">
+                        <span class="sun-mark"></span> E-PORTFOLIO
                     </div>
 
                     <h1 class="hero-title">Benjawan Thanyawut</h1>
 
                     <div class="hero-subtitle">
-                        Information Technology Student & Web Developer<br>
-                        <span style="font-size: 0.95rem; color: var(--text-secondary); font-weight: 400; letter-spacing: 0.5px; text-transform: none;">
+                        Information Technology Student &amp; Web Developer<br>
+                        <span style="font-size: 0.95rem; color: var(--text-secondary); font-weight: 400; letter-spacing: 0.5px;">
                             <i class="fa-solid fa-graduation-cap" style="margin-right: 5px;"></i> Thai-Nichi Institute of Technology
                         </span>
                     </div>
 
-                    <p class="hero-description">
-                        มุ่งมั่นพัฒนาระบบที่มีประสิทธิภาพ จัดการข้อมูลอย่างเป็นระเบียบ พร้อมเรียนรู้วัฒนธรรมการทำงานแบบองค์กรญี่ปุ่น (Japanese Corporate Culture)
-                    </p>
                     <a href="#projects" class="btn-primary">My Project</a>
+                    <div class="hero-scroll-cue">
+                        <i class="fa-solid fa-arrow-down"></i> Scroll to explore
+                    </div>
                 </div>
 
                 <div class="hero-visual">
                     <div class="hero-img-col" style="margin-top: 40px;">
-                        <div class="hero-img-placeholder hero-img-2" style="background-image: url('Photo/photo1.jpg');"></div>
-                        <div class="hero-img-placeholder hero-img-3" style="background-image: url('Photo/photo2.jpg');"></div>
+                        <div class="hero-img-placeholder hero-img-2 zoomable" data-caption="เบญจวรรณ ธัญญวุฒิ" style="background-image: url('Photo/photo1.jpg');"></div>
+                        <div class="hero-img-placeholder hero-img-3 zoomable" data-caption="เบญจวรรณ ธัญญวุฒิ" style="background-image: url('Photo/photo2.jpg');"></div>
                     </div>
                     <div class="hero-img-col">
-                        <div class="hero-img-placeholder hero-img-1" style="background-image: url('Photo/Profile.jpg');"></div>
+                        <div class="hero-img-placeholder hero-img-1 zoomable" data-caption="รูปโปรไฟล์ เบญจวรรณ ธัญญวุฒิ" style="background-image: url('Photo/Profile.jpg');"></div>
                     </div>
                 </div>
             </div>
@@ -72,7 +77,7 @@
 
         <section id="about">
             <div class="container">
-                <h2 class="section-title">Introduce and Personal</h2>
+                <h2 class="section-title"><span class="sun-mark"></span> Introduce and Personal</h2>
 
                 <div class="profile-grid three-cols">
                     <div class="intro-card">
@@ -132,7 +137,7 @@
 
         <section id="skills" class="bg-light">
             <div class="container">
-                <h2 class="section-title">Skills and Tools</h2>
+                <h2 class="section-title"><span class="sun-mark"></span> Skills and Tools</h2>
                 <div class="skills-grid">
 
                     <div class="skill-card highlight-card">
@@ -175,10 +180,10 @@
 
         <section id="projects">
             <div class="container">
-                <h2 class="section-title">Projects</h2>
+                <h2 class="section-title"><span class="sun-mark"></span> Projects</h2>
 
                 <div class="card-grid">
-                    <div class="card" onclick="openModal('modal-proj-1')">
+                    <div class="card" onclick="openModal('modal-proj-1')" tabindex="0">
                         <div class="card-img-placeholder" style="background-image: url('Photo/GRAND.png'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                         <div class="card-info">
                             <h3 class="card-title">Grandline Island Voyage Application</h3>
@@ -187,25 +192,25 @@
                         </div>
                     </div>
 
-                    <div class="card" onclick="openModal('modal-proj-2')">
+                    <div class="card" onclick="openModal('modal-proj-2')" tabindex="0">
                         <div class="card-img-placeholder" style="background-image: url('Photo/shabu.png'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                         <div class="card-info">
                             <h3 class="card-title">HiwShabu RESTAURANTS website</h3>
                             <p class="card-desc">Web Application (Laravel)</p>
-                            <div class="click-to-view">Click<i class="fa-solid fa-arrow-right"></i></div>
+                            <div class="click-to-view">Click <i class="fa-solid fa-arrow-right"></i></div>
                         </div>
                     </div>
 
-                    <div class="card" onclick="openModal('modal-proj-3')">
+                    <div class="card" onclick="openModal('modal-proj-3')" tabindex="0">
                         <div class="card-img-placeholder" style="background-image: url('Photo/port.png'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                         <div class="card-info">
                             <h3 class="card-title">Portfolio Management System (RPA)</h3>
                             <p class="card-desc">Robotic Process Automation</p>
-                            <div class="click-to-view">Click<i class="fa-solid fa-arrow-right"></i></div>
+                            <div class="click-to-view">Click <i class="fa-solid fa-arrow-right"></i></div>
                         </div>
                     </div>
 
-                    <div class="card" onclick="openModal('modal-proj-4')">
+                    <div class="card" onclick="openModal('modal-proj-4')" tabindex="0">
                         <div class="card-img-placeholder" style="background-image: url('Photo/onlinecover.png'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                         <div class="card-info">
                             <h3 class="card-title">Online Library Management System</h3>
@@ -214,7 +219,7 @@
                         </div>
                     </div>
 
-                    <div class="card" onclick="openModal('modal-proj-5')">
+                    <div class="card" onclick="openModal('modal-proj-5')" tabindex="0">
                         <div class="card-img-placeholder" style="background-image: url('Photo/Minowear.png'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                         <div class="card-info">
                             <h3 class="card-title">MINOWEAR E-commerce Website</h3>
@@ -228,10 +233,10 @@
 
         <section id="activities" class="bg-light">
             <div class="container">
-                <h2 class="section-title">Activities and Certificates</h2>
+                <h2 class="section-title"><span class="sun-mark"></span> Activities and Certificates</h2>
 
                 <div class="card-grid three-cols">
-                    <div class="card" onclick="openModal('modal-act-1')">
+                    <div class="card" onclick="openModal('modal-act-1')" tabindex="0">
                         <div class="card-img-placeholder cert-thumb" style="background-image: url('Photo/boot1.jpg'); background-size: cover; background-position: center;"></div>
                         <div class="card-info">
                             <h3 class="card-title cert-title">NCSA CTF BOOTCAMP</h3>
@@ -239,7 +244,7 @@
                         </div>
                     </div>
 
-                    <div class="card" onclick="openModal('modal-act-2')">
+                    <div class="card" onclick="openModal('modal-act-2')" tabindex="0">
                         <div class="card-img-placeholder cert-thumb" style="background-image: url('Photo/four1.jpg'); background-size: cover; background-position: center;"></div>
                         <div class="card-info">
                             <h3 class="card-title cert-title">FOURDIGIT Practical SERVICE DESIGN SCHOOL</h3>
@@ -247,7 +252,7 @@
                         </div>
                     </div>
 
-                    <div class="card" onclick="openModal('modal-act-3')">
+                    <div class="card" onclick="openModal('modal-act-3')" tabindex="0">
                         <div class="card-img-placeholder cert-thumb" style="background-image: url('Photo/excel2.jpg'); background-size: cover; background-position: center;"></div>
                         <div class="card-info">
                             <h3 class="card-title cert-title">MOS Olympic – ExcelVerse Challenge 2026</h3>
@@ -272,6 +277,22 @@
         </div>
     </footer>
 
+    <!-- Back to top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Lightbox -->
+    <div class="lightbox-overlay" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <div class="lightbox-inner">
+            <img src="" alt="Enlarged view" id="lightbox-img">
+            <p class="lightbox-caption" id="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <!-- MODALS -->
+    <!-- Project 1 (Grandline) -->
     <div class="modal-overlay" id="modal-proj-1">
         <div class="modal-content">
             <span class="modal-close" onclick="closeModal('modal-proj-1')">&times;</span>
@@ -279,9 +300,9 @@
                 <h2>Grandline Island Voyage Application</h2>
                 
                 <div class="modal-mobile-gallery">
-                    <div class="modal-mobile-img" style="background-image: url('Photo/grand1.png');"></div>
-                    <div class="modal-mobile-img" style="background-image: url('Photo/grand2.png');"></div>
-                    <div class="modal-mobile-img" style="background-image: url('Photo/grand3.png');"></div>
+                    <div class="modal-mobile-img" data-caption="หน้าจอแอปพลิเคชัน Grandline Island Voyage" style="background-image: url('Photo/grand1.png');"></div>
+                    <div class="modal-mobile-img" data-caption="ระบบ Quiz ประจำเกาะในแอปพลิเคชัน" style="background-image: url('Photo/grand2.png');"></div>
+                    <div class="modal-mobile-img" data-caption="ระบบสะสม Character Card" style="background-image: url('Photo/grand3.png');"></div>
                 </div>
 
                 <div class="project-details">
@@ -308,6 +329,7 @@
         </div>
     </div>
 
+    <!-- Project 2 (HiwShabu) -->
     <div class="modal-overlay" id="modal-proj-2">
         <div class="modal-content">
             <span class="modal-close" onclick="closeModal('modal-proj-2')">&times;</span>
@@ -315,9 +337,9 @@
                 <h2>HiwShabu RESTAURANTS website</h2>
                 
                 <div class="modal-img-gallery-custom">
-                    <div class="modal-img-main" style="background-image: url('Photo/shabu3.png');"></div>
-                    <div class="modal-img-sub" style="background-image: url('Photo/shabu1.png');"></div>
-                    <div class="modal-img-sub" style="background-image: url('Photo/shabu2.png');"></div>
+                    <div class="modal-img-main" data-caption="หน้าหลักเว็บไซต์ HiwShabu" style="background-image: url('Photo/shabu3.png');"></div>
+                    <div class="modal-img-sub" data-caption="หน้าจอเว็บไซต์ HiwShabu" style="background-image: url('Photo/shabu1.png');"></div>
+                    <div class="modal-img-sub" data-caption="หน้าจอเว็บไซต์ HiwShabu" style="background-image: url('Photo/shabu2.png');"></div>
                 </div>
 
                 <div class="project-details">
@@ -341,15 +363,17 @@
         </div>
     </div>
 
+    <!-- Project 3 (RPA) -->
     <div class="modal-overlay" id="modal-proj-3">
         <div class="modal-content">
             <span class="modal-close" onclick="closeModal('modal-proj-3')">&times;</span>
             <div class="modal-body">
                 <h2>Portfolio Management System (RPA)</h2>
+                
                 <div class="modal-img-stack">
-                    <div class="modal-img-full" style="background-image: url('Photo/port2.png');"></div>
-                    <div class="modal-img-full" style="background-image: url('Photo/port4.png');"></div>
-                    <div class="modal-img-full" style="background-image: url('Photo/port5.png');"></div>
+                    <div class="modal-img-full" data-caption="หน้าจอระบบ Portfolio Management System (RPA)" style="background-image: url('Photo/port2.png');"></div>
+                    <div class="modal-img-full" data-caption="ขั้นตอนการทำงานของระบบ RPA" style="background-image: url('Photo/port4.png');"></div>
+                    <div class="modal-img-full" data-caption="ระบบแจ้งเตือนและนัดหมายสัมภาษณ์" style="background-image: url('Photo/port5.png');"></div>
                 </div>
 
                 <div class="project-details">
@@ -377,15 +401,17 @@
         </div>
     </div>
 
+    <!-- Project 4 (Library) -->
     <div class="modal-overlay" id="modal-proj-4">
         <div class="modal-content">
             <span class="modal-close" onclick="closeModal('modal-proj-4')">&times;</span>
             <div class="modal-body">
                 <h2>Online Library Management System</h2>
+                
                 <div class="modal-img-mixed">
-                    <div class="modal-img-top" style="background-image: url('Photo/online.png');"></div>
-                    <div class="modal-img-mid" style="background-image: url('Photo/Diagram1.png');"></div>
-                    <div class="modal-img-bottom" style="background-image: url('Photo/Diagram2.png');"></div>
+                    <div class="modal-img-top" data-caption="หน้าจอหลักของระบบ Online Library Management" style="background-image: url('Photo/online.png');"></div>
+                    <div class="modal-img-mid" data-caption="Use Case Diagram และ Data Flow Diagram ของระบบ" style="background-image: url('Photo/Diagram1.png');"></div>
+                    <div class="modal-img-bottom" data-caption="Class Diagram ของระบบ" style="background-image: url('Photo/Diagram2.png');"></div>
                 </div>
 
                 <div class="project-details">
@@ -411,15 +437,17 @@
         </div>
     </div>
 
+    <!-- Project 5 (MINOWEAR) -->
     <div class="modal-overlay" id="modal-proj-5">
         <div class="modal-content">
             <span class="modal-close" onclick="closeModal('modal-proj-5')">&times;</span>
             <div class="modal-body">
                 <h2>MINOWEAR E-commerce Website</h2>
+                
                 <div class="modal-img-gallery-3col">
-                    <div class="modal-img" style="background-image: url('Photo/image.png');"></div>
-                    <div class="modal-img" style="background-image: url('Photo/minowear2.png');"></div>
-                    <div class="modal-img" style="background-image: url('Photo/minowear3.png');"></div>
+                    <div class="modal-img" data-caption="หน้าเว็บไซต์ MINOWEAR" style="background-image: url('Photo/image.png');"></div>
+                    <div class="modal-img" data-caption="หน้าคาตาล็อกสินค้า MINOWEAR" style="background-image: url('Photo/minowear2.png');"></div>
+                    <div class="modal-img" data-caption="หน้าสั่งซื้อสินค้า MINOWEAR" style="background-image: url('Photo/minowear3.png');"></div>
                 </div>
 
                 <div class="project-details">
@@ -444,14 +472,16 @@
         </div>
     </div>
 
+    <!-- Activity 1 -->
     <div class="modal-overlay" id="modal-act-1">
         <div class="modal-content">
             <span class="modal-close" onclick="closeModal('modal-act-1')">&times;</span>
             <div class="modal-body">
                 <h2>NCSA CTF BOOTCAMP</h2>
+                
                 <div class="modal-img-stack">
-                    <div class="modal-img-full" style="background-image: url('Photo/boot1.jpg');"></div>
-                    <div class="modal-img-full" style="background-image: url('Photo/boot2.jpg');"></div>
+                    <div class="modal-img-full" data-caption="บรรยากาศค่าย NCSA CTF Bootcamp" style="background-image: url('Photo/boot1.jpg');"></div>
+                    <div class="modal-img-full" data-caption="กิจกรรมแข่งขัน Capture The Flag" style="background-image: url('Photo/boot2.jpg');"></div>
                 </div>
 
                 <div class="project-details">
@@ -471,15 +501,17 @@
         </div>
     </div>
 
+    <!-- Activity 2 -->
     <div class="modal-overlay" id="modal-act-2">
         <div class="modal-content">
             <span class="modal-close" onclick="closeModal('modal-act-2')">&times;</span>
             <div class="modal-body">
                 <h2>FOURDIGIT Practical SERVICE DESIGN SCHOOL</h2>
+                
                 <div class="modal-img-stack">
-                    <div class="modal-img-full" style="background-image: url('Photo/four1.jpg');"></div>
-                    <div class="modal-img-full" style="background-image: url('Photo/four2.jpg');"></div>
-                    <div class="modal-img-full" style="background-image: url('Photo/four3.jpg');"></div>
+                    <div class="modal-img-full" data-caption="บรรยากาศ FOURDIGIT Service Design School" style="background-image: url('Photo/four1.jpg');"></div>
+                    <div class="modal-img-full" data-caption="กิจกรรมอบรม UI/UX Design" style="background-image: url('Photo/four2.jpg');"></div>
+                    <div class="modal-img-full" data-caption="กิจกรรมวิเคราะห์ Persona" style="background-image: url('Photo/four3.jpg');"></div>
                 </div>
 
                 <div class="project-details">
@@ -497,14 +529,16 @@
         </div>
     </div>
 
+    <!-- Activity 3 -->
     <div class="modal-overlay" id="modal-act-3">
         <div class="modal-content">
             <span class="modal-close" onclick="closeModal('modal-act-3')">&times;</span>
             <div class="modal-body">
                 <h2>MOS Olympic – ExcelVerse Challenge 2026</h2>
+                
                 <div class="modal-img-stack">
-                    <div class="modal-img-full" style="background-image: url('Photo/excel1.jpg');"></div>
-                    <div class="modal-img-full" style="background-image: url('Photo/excel2.jpg');"></div>
+                    <div class="modal-img-full" data-caption="บรรยากาศการแข่งขัน MOS Olympic – ExcelVerse Challenge 2026" style="background-image: url('Photo/excel1.jpg');"></div>
+                    <div class="modal-img-full" data-caption="บรรยากาศการแข่งขัน MOS Olympic – ExcelVerse Challenge 2026" style="background-image: url('Photo/excel2.jpg');"></div>
                 </div>
 
                 <div class="project-details">
@@ -521,27 +555,32 @@
         </div>
     </div>
 
+    <!-- All Certificates -->
     <div class="modal-overlay" id="modal-certificates">
         <div class="modal-content text-center-modal">
             <span class="modal-close" onclick="closeModal('modal-certificates')">&times;</span>
             <div class="modal-body">
                 <h2 style="margin-bottom: 2rem;">รวมเกียรติบัตร (All Certificates)</h2>
                 <div class="cert-grid-2col">
-                    <div>
-                        <div class="cert-item" style="background-image: url('Photo/bootcampncsa.png');"></div>
-                        <h4 style="margin-top: 0.5rem; font-size: 1rem;">[NCSA] รองชนะเลิศอันดับ 2 Mini CTF (Team: Crimson @egis)</h4>
+                    <div class="cert-card">
+                        <span class="cert-badge"><i class="fa-solid fa-medal"></i> อันดับ 2</span>
+                        <div class="cert-item" data-caption="[NCSA] รองชนะเลิศอันดับ 2 Mini CTF (Team: Crimson @egis)" style="background-image: url('Photo/bootcampncsa.png');"></div>
+                        <h4>[NCSA] รองชนะเลิศอันดับ 2 Mini CTF (Team: Crimson @egis)</h4>
                     </div>
-                    <div>
-                        <div class="cert-item" style="background-image: url('Photo/women25.png');"></div>
-                        <h4 style="margin-top: 0.5rem; font-size: 1rem;">Women thailand cyber top talent 2025</h4>
+                    <div class="cert-card">
+                        <span class="cert-badge"><i class="fa-solid fa-award"></i> 2025</span>
+                        <div class="cert-item" data-caption="Women Thailand Cyber Top Talent 2025" style="background-image: url('Photo/women25.png');"></div>
+                        <h4>Women Thailand Cyber Top Talent 2025</h4>
                     </div>
-                    <div>
-                        <div class="cert-item" style="background-image: url('Photo/women24.jpg');"></div>
-                        <h4 style="margin-top: 0.5rem; font-size: 1rem;">Women thailand cyber top talent 2025</h4>
+                    <div class="cert-card">
+                        <span class="cert-badge"><i class="fa-solid fa-award"></i> 2024</span>
+                        <div class="cert-item" data-caption="Women Thailand Cyber Top Talent 2024" style="background-image: url('Photo/women24.jpg');"></div>
+                        <h4>Women Thailand Cyber Top Talent 2024</h4>
                     </div>
-                    <div>
-                        <div class="cert-item" style="background-image: url('Photo/toptalent.png');"></div>
-                        <h4 style="margin-top: 0.5rem; font-size: 1rem;">Thailand Cyber Talent 2025</h4>
+                    <div class="cert-card">
+                        <span class="cert-badge"><i class="fa-solid fa-certificate"></i> 2025</span>
+                        <div class="cert-item" data-caption="Thailand Cyber Talent 2025" style="background-image: url('Photo/toptalent.png');"></div>
+                        <h4>Thailand Cyber Talent 2025</h4>
                     </div>
                 </div>
             </div>
@@ -549,21 +588,7 @@
     </div>
 
     <script>
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-
-        if (hamburger) {
-            hamburger.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-            });
-        }
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
+        // Modal open/close (kept inline — referenced directly by card onclick attributes)
         function openModal(modalId) {
             const modal = document.getElementById(modalId);
             if (modal) {
@@ -586,6 +611,16 @@
                 document.body.style.overflow = 'auto';
             }
         }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay.active').forEach(m => {
+                    m.classList.remove('active');
+                });
+                document.body.style.overflow = 'auto';
+            }
+        });
     </script>
+    <script src="script.js"></script>
 </body>
 </html>

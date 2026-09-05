@@ -755,6 +755,10 @@ a.contact-item:hover i {
     background-position: center;
     background-repeat: no-repeat;
 }
+.erd-full {
+    height: 460px;
+    border: 1px solid var(--border-color);
+}
 
 .modal-mobile-gallery {
     display: grid;
@@ -1229,6 +1233,22 @@ footer {
     .cert-item {
         height: 220px;
     }
+
+    /* Fit images fully within their frame on mobile instead of cropping */
+    .card-img-placeholder,
+    .modal-img-full,
+    .modal-img-main,
+    .modal-img-sub,
+    .modal-img-top,
+    .modal-img-gallery-3col .modal-img {
+        background-size: contain !important;
+        background-color: #ffffff;
+        height: 240px;
+    }
+    .erd-full {
+        height: 220px;
+    }
+
     .back-to-top {
         right: 1.2rem;
         bottom: 1.2rem;

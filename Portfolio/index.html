@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benjawan Thanyawut | E-Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-mark"></div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><span class="sun-mark"></span> BENJAWAN.T</div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#activities">Activities</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-sun" aria-hidden="true"></div>
+            <div class="container hero-layout">
+                <div class="hero-content">
+                    <div class="hero-eyebrow">
+                        <span class="sun-mark"></span> E-PORTFOLIO
+                    </div>
+
+                    <h1 class="hero-title">Benjawan Thanyawut</h1>
+
+                    <div class="hero-subtitle">
+                        Information Technology Student &amp; Web Developer<br>
+                        <span style="font-size: 0.95rem; color: var(--text-secondary); font-weight: 400; letter-spacing: 0.5px;">
+                            <i class="fa-solid fa-graduation-cap" style="margin-right: 5px;"></i> Thai-Nichi Institute of Technology
+                        </span>
+                    </div>
+
+                    <a href="#projects" class="btn-primary">My Project</a>
+                    <div class="hero-scroll-cue">
+                        <i class="fa-solid fa-arrow-down"></i> Scroll to explore
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-img-col" style="margin-top: 40px;">
+                        <div class="hero-img-placeholder hero-img-2 zoomable" data-caption="เบญจวรรณ ธัญญวุฒิ" style="background-image: url('Photo/photo1.jpg');"></div>
+                        <div class="hero-img-placeholder hero-img-3 zoomable" data-caption="เบญจวรรณ ธัญญวุฒิ" style="background-image: url('Photo/photo2.jpg');"></div>
+                    </div>
+                    <div class="hero-img-col">
+                        <div class="hero-img-placeholder hero-img-1 zoomable" data-caption="รูปโปรไฟล์ เบญจวรรณ ธัญญวุฒิ" style="background-image: url('Photo/Profile.jpg');"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title"><span class="sun-mark"></span> Introduce and Personal</h2>
+
+                <div class="profile-grid three-cols">
+                    <div class="intro-card">
+                        <h3 class="subsection-title"><i class="fa-regular fa-address-card"></i> Personal</h3>
+                        <ul class="data-list">
+                            <li><span class="data-label">ชื่อ-สกุล:</span> <span class="data-value">เบญจวรรณ ธัญญวุฒิ (Benjawan Thanyawut)</span></li>
+                            <li><span class="data-label">ชื่อเล่น:</span> <span class="data-value">เบล (Bell)</span></li>
+                            <li><span class="data-label">วันเกิด:</span> <span class="data-value">05 พฤษภาคม 2005 (อายุ 21 ปี)</span></li>
+                            <li><span class="data-label">มหาวิทยาลัย:</span> <span class="data-value">สถาบันเทคโนโลยีไทย-ญี่ปุ่น</span></li>
+                            <li><span class="data-label">คณะ:</span> <span class="data-value">เทคโนโลยีสารสนเทศ</span></li>
+                            <li><span class="data-label">เกรดเฉลี่ย:</span> <span class="data-value">GPA 3.74 ปัจจุบัน</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="intro-card">
+                        <h3 class="subsection-title"><i class="fa-solid fa-language"></i> Language</h3>
+                        <ul class="data-list">
+                            <li><span class="data-label">ภาษาไทย:</span> <span class="data-value">Native</span></li>
+                            <li><span class="data-label">ภาษาอังกฤษ:</span> <span class="data-value">Intermediate</span></li>
+                            <li>
+                                <span class="data-label">ภาษาญี่ปุ่น:</span>
+                                <span class="data-value"> N5 <br><small class="text-muted">(การวัดระดับของมหาวิทยาลัย)</small></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="intro-card">
+                        <h3 class="subsection-title"><i class="fa-regular fa-heart"></i> Key Strengths</h3>
+                        <ul class="data-list">
+                            <li><i class="fa-solid fa-check" style="color: var(--accent-color); margin-top: 5px;"></i> <span class="data-value">Quick Learner</span></li>
+                            <li><i class="fa-solid fa-check" style="color: var(--accent-color); margin-top: 5px;"></i> <span class="data-value">Teamwork</span></li>
+                            <li><i class="fa-solid fa-check" style="color: var(--accent-color); margin-top: 5px;"></i> <span class="data-value">High Adaptability</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="contact" class="contact-banner mt-4">
+                    <h3 class="contact-banner-title">Contact</h3>
+                    <div class="contact-banner-links">
+                        <a href="mailto:th.benjawan_st@tni.ac.th" class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>th.benjawan_st@tni.ac.th / benjawan.bbell@gmail.com</span>
+                        </a>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>061-672-1445</span>
+                        </div>
+                        <a href="https://github.com/Benjawan2005" target="_blank" class="contact-item">
+                            <i class="fa-brands fa-github"></i>
+                            <span style="text-decoration: underline;">Benjawan2005</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="skills" class="bg-light">
+            <div class="container">
+                <h2 class="section-title"><span class="sun-mark"></span> Skills and Tools</h2>
+                <div class="skills-grid">
+
+                    <div class="skill-card highlight-card">
+                        <h3><i class="fa-solid fa-star"></i> Core Skill</h3>
+                        <div class="skill-tags">
+                            <span class="tag">HTML / CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Microsoft Office</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Learn Experience</h3>
+                        <ul class="skill-list">
+                            <li>PHP</li>
+                            <li>Java</li>
+                            <li>Laravel</li>
+                            <li>MySQL</li>
+                            <li>.NET MAUI (XAML)</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Tools</h3>
+                        <ul class="skill-list">
+                            <li>GitHub</li>
+                            <li>Visual Studio Code</li>
+                            <li>Visual Studio 2019</li>
+                            <li>Android Studio</li>
+                            <li>XAMPP / phpMyAdmin</li>
+                            <li>Power Automate (RPA)</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2 class="section-title"><span class="sun-mark"></span> Projects</h2>
+
+                <div class="card-grid">
+                    <div class="card" onclick="openModal('modal-proj-1')" tabindex="0">
+                        <div class="card-img-placeholder" style="background-image: url('Photo/GRAND.png'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+                        <div class="card-info">
+                            <h3 class="card-title">Grandline Island Voyage Application</h3>
+                            <p class="card-desc">Mobile Application</p>
+                            <div class="click-to-view">Click <i class="fa-solid fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="openModal('modal-proj-2')" tabindex="0">
+                        <div class="card-img-placeholder" style="background-image: url('Photo/shabu.png'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+                        <div class="card-info">
+                            <h3 class="card-title">HiwShabu RESTAURANTS website</h3>
+                            <p class="card-desc">Web Application (Laravel)</p>
+                            <div class="click-to-view">Click <i class="fa-solid fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="openModal('modal-proj-3')" tabindex="0">
+                        <div class="card-img-placeholder" style="background-image: url('Photo/port.png'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+                        <div class="card-info">
+                            <h3 class="card-title">Portfolio Management System (RPA)</h3>
+                            <p class="card-desc">Robotic Process Automation</p>
+                            <div class="click-to-view">Click <i class="fa-solid fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="openModal('modal-proj-4')" tabindex="0">
+                        <div class="card-img-placeholder" style="background-image: url('Photo/onlinecover.png'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+                        <div class="card-info">
+                            <h3 class="card-title">Online Library Management System</h3>
+                            <p class="card-desc">Web Application</p>
+                            <div class="click-to-view">Click <i class="fa-solid fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="openModal('modal-proj-5')" tabindex="0">
+                        <div class="card-img-placeholder" style="background-image: url('Photo/Minowear.png'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+                        <div class="card-info">
+                            <h3 class="card-title">MINOWEAR E-commerce Website</h3>
+                            <p class="card-desc">E-commerce / WordPress</p>
+                            <div class="click-to-view">Click <i class="fa-solid fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="activities" class="bg-light">
+            <div class="container">
+                <h2 class="section-title"><span class="sun-mark"></span> Activities and Certificates</h2>
+
+                <div class="card-grid three-cols">
+                    <div class="card" onclick="openModal('modal-act-1')" tabindex="0">
+                        <div class="card-img-placeholder cert-thumb" style="background-image: url('Photo/boot1.jpg'); background-size: cover; background-position: center;"></div>
+                        <div class="card-info">
+                            <h3 class="card-title cert-title">NCSA CTF BOOTCAMP</h3>
+                            <div class="click-to-view">Click <i class="fa-solid fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="openModal('modal-act-2')" tabindex="0">
+                        <div class="card-img-placeholder cert-thumb" style="background-image: url('Photo/four1.jpg'); background-size: cover; background-position: center;"></div>
+                        <div class="card-info">
+                            <h3 class="card-title cert-title">FOURDIGIT Practical SERVICE DESIGN SCHOOL</h3>
+                            <div class="click-to-view">Click <i class="fa-solid fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="openModal('modal-act-3')" tabindex="0">
+                        <div class="card-img-placeholder cert-thumb" style="background-image: url('Photo/excel2.jpg'); background-size: cover; background-position: center;"></div>
+                        <div class="card-info">
+                            <h3 class="card-title cert-title">MOS Olympic – ExcelVerse Challenge 2026</h3>
+                            <div class="click-to-view">Click <i class="fa-solid fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 4rem;">
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Can view my certificates here.</p>
+                    <button class="btn-primary" onclick="openModal('modal-certificates')">
+                        <i class="fa-solid fa-award"></i> View All Certificates
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2026 Benjawan Thanyawut. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Lightbox -->
+    <div class="lightbox-overlay" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <div class="lightbox-inner">
+            <img src="" alt="Enlarged view" id="lightbox-img">
+            <p class="lightbox-caption" id="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <!-- MODALS -->
+    <!-- Project 1 (Grandline) -->
+    <div class="modal-overlay" id="modal-proj-1">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal-proj-1')">&times;</span>
+            <div class="modal-body">
+                <h2>Grandline Island Voyage Application</h2>
+                
+                <div class="modal-mobile-gallery">
+                    <div class="modal-mobile-img" data-caption="หน้าจอแอปพลิเคชัน Grandline Island Voyage" style="background-image: url('Photo/grand1.png');"></div>
+                    <div class="modal-mobile-img" data-caption="ระบบ Quiz ประจำเกาะในแอปพลิเคชัน" style="background-image: url('Photo/grand2.png');"></div>
+                    <div class="modal-mobile-img" data-caption="ระบบสะสม Character Card" style="background-image: url('Photo/grand3.png');"></div>
+                </div>
+
+                <div class="project-details">
+                    <h4><i class="fa-solid fa-circle-info"></i> 1. ภาพรวม (Overview)</h4>
+                    <p>แอปพลิเคชันบนมือถือที่จำลองการเดินทางอิงเนื้อเรื่องจากอนิเมะ One Piece เพื่อสร้างความบันเทิงและสอดแทรกความรู้ผ่านแบบทดสอบ</p>
+                    
+                    <h4><i class="fa-solid fa-star"></i> 2. ฟีเจอร์ (Features)</h4>
+                    <ul>
+                        <li>ระบบ Quiz เกี่ยวกับเนื้อเรื่องในแต่ละเกาะ</li>
+                        <li>ระบบสะสม Character Card เมื่อผู้ใช้งานทำแบบทดสอบผ่านเกณฑ์</li>
+                        <li>ประยุกต์ใช้แนวคิด Gamification ในการออกแบบ UX/UI เพื่อสร้างแรงจูงใจและประสบการณ์ที่ดีกับผู้ใช้งาน</li>
+                    </ul>
+                    
+                    <h4><i class="fa-solid fa-code"></i> 3. เทคโนโลยีที่ใช้ (Technologies)</h4>
+                    <div class="tech-tags">
+                        <span>.NET (C#)</span>
+                        <span>XAML</span>
+                        <span>.NET MAUI</span>
+                    </div>
+                    
+                    <a href="https://drive.google.com/file/d/1PrKcYvBEydc9zsyoCcUgJr1YLpkhDCJE/view?usp=drive_link" target="_blank" class="btn-video"><i class="fa-solid fa-play"></i> รับชมวิดีโอ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 (HiwShabu) -->
+    <div class="modal-overlay" id="modal-proj-2">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal-proj-2')">&times;</span>
+            <div class="modal-body">
+                <h2>HiwShabu RESTAURANTS website</h2>
+                
+                <div class="modal-img-gallery-custom">
+                    <div class="modal-img-main" data-caption="หน้าหลักเว็บไซต์ HiwShabu" style="background-image: url('Photo/shabu3.png');"></div>
+                    <div class="modal-img-sub" data-caption="หน้าจอเว็บไซต์ HiwShabu" style="background-image: url('Photo/shabu1.png');"></div>
+                    <div class="modal-img-sub" data-caption="หน้าจอเว็บไซต์ HiwShabu" style="background-image: url('Photo/shabu2.png');"></div>
+                </div>
+
+                <div class="project-details">
+                    <h4><i class="fa-solid fa-circle-info"></i> 1. ภาพรวม (Overview)</h4>
+                    <p>Web Application สำหรับรวบรวมและค้นหาร้านชาบูใกล้บริเวณสถาบันเพื่ออำนวยความสะดวกให้นักศึกษา รับผิดชอบหลักในส่วน Backend Development</p>
+                    
+                    <h4><i class="fa-solid fa-star"></i> 2. ฟีเจอร์ (Features)</h4>
+                    <ul>
+                        <li><strong>ผู้ดูแลระบบ:</strong> ระบบเพิ่ม ลบ แก้ไข ข้อมูล, จัดการข้อมูลสมาชิก, จัดการหลังบ้านรวม</li>
+                        <li><strong>ผู้ใช้งานทั่วไป:</strong> ระบบสมัครสมาชิก ล็อกอิน, บันทึกร้านอาหารโปรด, เขียนรีวิวร้านอาหาร</li>
+                    </ul>
+                    
+                    <h4><i class="fa-solid fa-code"></i> 3. เทคโนโลยีที่ใช้ (Technologies)</h4>
+                    <div class="tech-tags">
+                        <span>PHP (Laravel 12)</span>
+                        <span>MySQL</span>
+                        <span>XAMPP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 (RPA) -->
+    <div class="modal-overlay" id="modal-proj-3">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal-proj-3')">&times;</span>
+            <div class="modal-body">
+                <h2>Portfolio Management System (RPA)</h2>
+                
+                <div class="modal-img-stack">
+                    <div class="modal-img-full" data-caption="หน้าจอระบบ Portfolio Management System (RPA)" style="background-image: url('Photo/port2.png');"></div>
+                    <div class="modal-img-full" data-caption="ขั้นตอนการทำงานของระบบ RPA" style="background-image: url('Photo/port4.png');"></div>
+                    <div class="modal-img-full" data-caption="ระบบแจ้งเตือนและนัดหมายสัมภาษณ์" style="background-image: url('Photo/port5.png');"></div>
+                </div>
+
+                <div class="project-details">
+                    <h4><i class="fa-solid fa-circle-info"></i> 1. ภาพรวม (Overview)</h4>
+                    <p>ระบบ RPA ที่พัฒนาขึ้นเพื่อลดภาระงานซ้ำซ้อนของฝ่ายบุคคล (HR) ในกระบวนการรับสมัครงาน ตั้งแต่การยื่นพอร์ตโฟลิโอจนถึงการนัดหมายสัมภาษณ์</p>
+                    
+                    <h4><i class="fa-solid fa-star"></i> 2. ฟีเจอร์ (Features)</h4>
+                    <ul>
+                        <li>เชื่อมต่อแบบฟอร์มรับพอร์ตโฟลิโอของผู้สมัครเข้าสู่ Sharepoint</li>
+                        <li>ระบบส่งอีเมลแจ้งเตือนเพื่อขออนุมัติจาก HR และ Manager</li>
+                        <li>ระบบบันทึกวันและเวลาสัมภาษณ์ลงในปฏิทินโดยอัตโนมัติ</li>
+                        <li>ระบบส่งอีเมลแจ้งเตือน ให้ผู้สัมภาษณ์และผู้สมัครทราบล่วงหน้า 1 วันก่อนสัมภาษณ์</li>
+                    </ul>
+                    
+                    <h4><i class="fa-solid fa-code"></i> 3. เทคโนโลยีที่ใช้ (Technologies)</h4>
+                    <div class="tech-tags">
+                        <span>Microsoft Forms</span>
+                        <span>SharePoint</span>
+                        <span>Power Automate</span>
+                    </div>
+                    
+                    <a href="https://youtu.be/GfUGnDZjItU?si=1O0Kn4NBZoJK4loM" target="_blank" class="btn-video"><i class="fa-solid fa-play"></i> รับชมวิดีโอ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 4 (Library) -->
+    <div class="modal-overlay" id="modal-proj-4">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal-proj-4')">&times;</span>
+            <div class="modal-body">
+                <h2>Online Library Management System</h2>
+                
+                <div class="modal-img-mixed">
+                    <div class="modal-img-top" data-caption="หน้าจอหลักของระบบ Online Library Management" style="background-image: url('Photo/online.png');"></div>
+                    <div class="modal-img-mid" data-caption="Use Case Diagram และ Data Flow Diagram ของระบบ" style="background-image: url('Photo/Diagram1.png');"></div>
+                    <div class="modal-img-bottom" data-caption="Class Diagram ของระบบ" style="background-image: url('Photo/Diagram2.png');"></div>
+                </div>
+
+                <div class="project-details">
+                    <h4><i class="fa-solid fa-circle-info"></i> 1. ภาพรวม (Overview)</h4>
+                    <p>Web Application จัดการข้อมูลหนังสือที่พัฒนาร่วมกับเพื่อน โดยนำความรู้จากวิชา "Software Project Management" มาประยุกต์ใช้ในการพัฒนาระบบจริง</p>
+                    
+                    <h4><i class="fa-solid fa-star"></i> 2. ฟีเจอร์ (Features)</h4>
+                    <ul>
+                        <li><strong>จัดการข้อมูลหนังสือ:</strong> เพิ่ม ตรวจสอบ แก้ไข และจัดการรายละเอียดหนังสือในระบบ</li>
+                        <li><strong>จัดการผู้ใช้งาน:</strong> แบ่งสิทธิ์การใช้งานเป็น 3 กลุ่ม (นักศึกษา, บรรณารักษ์, ผู้ดูแลระบบ)</li>
+                        <li><strong>ออกแบบระบบ:</strong> ออกแบบโครงสร้างและวาดแผนภาพแสดงการทำงานระบบ</li>
+                    </ul>
+                    
+                    <h4><i class="fa-solid fa-code"></i> 3. เทคโนโลยีที่ใช้ (Technologies)</h4>
+                    <div class="tech-tags">
+                        <span>Laravel 12</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>XAMPP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 5 (MINOWEAR) -->
+    <div class="modal-overlay" id="modal-proj-5">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal-proj-5')">&times;</span>
+            <div class="modal-body">
+                <h2>MINOWEAR E-commerce Website</h2>
+                
+                <div class="modal-img-gallery-3col">
+                    <div class="modal-img" data-caption="หน้าเว็บไซต์ MINOWEAR" style="background-image: url('Photo/image.png');"></div>
+                    <div class="modal-img" data-caption="หน้าคาตาล็อกสินค้า MINOWEAR" style="background-image: url('Photo/minowear2.png');"></div>
+                    <div class="modal-img" data-caption="หน้าสั่งซื้อสินค้า MINOWEAR" style="background-image: url('Photo/minowear3.png');"></div>
+                </div>
+
+                <div class="project-details">
+                    <h4><i class="fa-solid fa-circle-info"></i> 1. ภาพรวม (Overview)</h4>
+                    <p>Website E-commerce จำหน่ายเสื้อผ้าสไตล์มินิมอล ออกแบบระบบตั้งแต่การลงทะเบียนสมาชิกจนถึงการสั่งซื้อสินค้าจริง</p>
+                    
+                    <h4><i class="fa-solid fa-star"></i> 2. ฟีเจอร์ (Features)</h4>
+                    <ul>
+                        <li>ระบบแคตตาล็อกสินค้า ตะกร้าสินค้า และการชำระเงิน</li>
+                        <li>ระบบสมัครสมาชิก เข้าสู่ระบบ และเขียนรีวิวสินค้า</li>
+                    </ul>
+                    
+                    <h4><i class="fa-solid fa-code"></i> 3. เทคโนโลยีที่ใช้ (Technologies)</h4>
+                    <div class="tech-tags">
+                        <span>WordPress</span>
+                        <span>WooCommerce</span>
+                    </div>
+                    
+                    <a href="https://drive.google.com/file/d/1PrKcYvBEydc9zsyoCcUgJr1YLpkhDCJE/view?usp=drive_link" target="_blank" class="btn-video"><i class="fa-solid fa-play"></i> รับชมวิดีโอ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Activity 1 -->
+    <div class="modal-overlay" id="modal-act-1">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal-act-1')">&times;</span>
+            <div class="modal-body">
+                <h2>NCSA CTF BOOTCAMP</h2>
+                
+                <div class="modal-img-stack">
+                    <div class="modal-img-full" data-caption="บรรยากาศค่าย NCSA CTF Bootcamp" style="background-image: url('Photo/boot1.jpg');"></div>
+                    <div class="modal-img-full" data-caption="กิจกรรมแข่งขัน Capture The Flag" style="background-image: url('Photo/boot2.jpg');"></div>
+                </div>
+
+                <div class="project-details">
+                    <h4><i class="fa-solid fa-bullhorn"></i> ภาพรวมกิจกรรม (Overview)</h4>
+                    <p>เข้าร่วมค่ายอบรมเชิงปฏิบัติการด้านความปลอดภัยทางไซเบอร์กับสกมช. ผ่านการคัดเลือกในรอบที่ 1 กรุงเทพมหานคร 50 คน</p>
+                    
+                    <h4><i class="fa-solid fa-pen-to-square"></i> สิ่งที่ได้ทำ (What I did)</h4>
+                    <ul>
+                        <li>เข้าร่วมการแข่งขันประเภททีมแบบ Capture The Flag</li>
+                        <li>ฝึกการวิเคราะห์โจทย์ การเจาะระบบ และการแก้ปัญหาช่องโหว่</li>
+                    </ul>
+
+                    <h4><i class="fa-solid fa-trophy"></i> ความสำเร็จ (Achievement)</h4>
+                    <p>ได้รับเหรียญรางวัลชนะเลิศอันดับ 3 จากการแข่งขันทีม CTF</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Activity 2 -->
+    <div class="modal-overlay" id="modal-act-2">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal-act-2')">&times;</span>
+            <div class="modal-body">
+                <h2>FOURDIGIT Practical SERVICE DESIGN SCHOOL</h2>
+                
+                <div class="modal-img-stack">
+                    <div class="modal-img-full" data-caption="บรรยากาศ FOURDIGIT Service Design School" style="background-image: url('Photo/four1.jpg');"></div>
+                    <div class="modal-img-full" data-caption="กิจกรรมอบรม UI/UX Design" style="background-image: url('Photo/four2.jpg');"></div>
+                    <div class="modal-img-full" data-caption="กิจกรรมวิเคราะห์ Persona" style="background-image: url('Photo/four3.jpg');"></div>
+                </div>
+
+                <div class="project-details">
+                    <h4><i class="fa-solid fa-bullhorn"></i> ภาพรวมกิจกรรม (Overview)</h4>
+                    <p>เข้าร่วมอบรม Service Design Bootcamp กับบริษัท FOURDIGIT</p>
+                    
+                    <h4><i class="fa-solid fa-pen-to-square"></i> สิ่งที่ได้ทำ (What I did)</h4>
+                    <ul>
+                        <li>เรียนรู้พื้นฐานการออกแบบส่วนติดต่อผู้ใช้งาน (UI)</li>
+                        <li>ทำความเข้าใจความสำคัญของประสบการณ์ผู้ใช้งาน (UX)</li>
+                        <li>ฝึกปฏิบัติการวิเคราะห์กลุ่มเป้าหมาย (Persona) เพื่อนำไปพัฒนาระบบให้ตอบโจทย์ผู้ใช้งานจริง</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Activity 3 -->
+    <div class="modal-overlay" id="modal-act-3">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal-act-3')">&times;</span>
+            <div class="modal-body">
+                <h2>MOS Olympic – ExcelVerse Challenge 2026</h2>
+                
+                <div class="modal-img-stack">
+                    <div class="modal-img-full" data-caption="บรรยากาศการแข่งขัน MOS Olympic – ExcelVerse Challenge 2026" style="background-image: url('Photo/excel1.jpg');"></div>
+                    <div class="modal-img-full" data-caption="บรรยากาศการแข่งขัน MOS Olympic – ExcelVerse Challenge 2026" style="background-image: url('Photo/excel2.jpg');"></div>
+                </div>
+
+                <div class="project-details">
+                    <h4><i class="fa-solid fa-bullhorn"></i> ภาพรวมกิจกรรม (Overview)</h4>
+                    <p>เข้าร่วมโครงการอบรมและการแข่งขันการใช้งานโปรแกรม Microsoft Excel</p>
+                    
+                    <h4><i class="fa-solid fa-pen-to-square"></i> สิ่งที่ได้ทำ (What I did)</h4>
+                    <ul>
+                        <li>เรียนรู้การใช้งานฟังก์ชันเชิงลึกของ Excel</li>
+                        <li>พัฒนาทักษะด้าน Data Analysis ผ่านการแข่งขัน</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- All Certificates -->
+    <div class="modal-overlay" id="modal-certificates">
+        <div class="modal-content text-center-modal">
+            <span class="modal-close" onclick="closeModal('modal-certificates')">&times;</span>
+            <div class="modal-body">
+                <h2 style="margin-bottom: 2rem;">รวมเกียรติบัตร (All Certificates)</h2>
+                <div class="cert-grid-2col">
+                    <div class="cert-card">
+                        <span class="cert-badge"><i class="fa-solid fa-medal"></i> อันดับ 2</span>
+                        <div class="cert-item" data-caption="[NCSA] รองชนะเลิศอันดับ 2 Mini CTF (Team: Crimson @egis)" style="background-image: url('Photo/bootcampncsa.png');"></div>
+                        <h4>[NCSA] รองชนะเลิศอันดับ 2 Mini CTF (Team: Crimson @egis)</h4>
+                    </div>
+                    <div class="cert-card">
+                        <span class="cert-badge"><i class="fa-solid fa-award"></i> 2025</span>
+                        <div class="cert-item" data-caption="Women Thailand Cyber Top Talent 2025" style="background-image: url('Photo/women25.png');"></div>
+                        <h4>Women Thailand Cyber Top Talent 2025</h4>
+                    </div>
+                    <div class="cert-card">
+                        <span class="cert-badge"><i class="fa-solid fa-award"></i> 2024</span>
+                        <div class="cert-item" data-caption="Women Thailand Cyber Top Talent 2024" style="background-image: url('Photo/women24.jpg');"></div>
+                        <h4>Women Thailand Cyber Top Talent 2024</h4>
+                    </div>
+                    <div class="cert-card">
+                        <span class="cert-badge"><i class="fa-solid fa-certificate"></i> 2025</span>
+                        <div class="cert-item" data-caption="Thailand Cyber Talent 2025" style="background-image: url('Photo/toptalent.png');"></div>
+                        <h4>Thailand Cyber Talent 2025</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Modal open/close (kept inline — referenced directly by card onclick attributes)
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal-overlay')) {
+                event.target.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay.active').forEach(m => {
+                    m.classList.remove('active');
+                });
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
